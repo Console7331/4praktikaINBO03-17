@@ -5,16 +5,16 @@ void creatinfArray(int *a,int b)
 {
 	a= new int[b];
 }
-void sort(int *mas)
+void sort(int *massiv)
 {
     int ok;
     for (int m = 0; m <= 12;m++)
     {
-        if ((mas[m] % 2 != 0) && (mas[m + 1] % 2 == 0))
+        if ((massiv[m] % 2 != 0) && (massiv[m + 1] % 2 == 0))
         {
-            ok = mas[m];
-            mas[m] = mas[m + 1];
-            mas[m + 1] = ok;    
+            ok = massiv[m];
+            massiv[m] = massiv[m + 1];
+            massiv[m + 1] = ok;    
         }
     }
 }
