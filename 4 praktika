@@ -1,0 +1,42 @@
+#include <iostream>
+
+using namespace std;
+void creatinfArray(int *a,int b)
+{
+	a= new int[b];
+}
+void sort(int *mas)
+{
+    int ok;
+    for (int m = 0; m <= 12;m++)
+    {
+        if ((mas[m] % 2 != 0) && (mas[m + 1] % 2 == 0))
+        {
+            ok = mas[m];
+            mas[m] = mas[m + 1];
+            mas[m + 1] = ok;    
+        }
+    }
+}
+
+
+int main()
+{
+int size;
+int *arr;
+
+creatingArray(arr,12);
+for (int k=0;k<12;k++)
+{
+	cout << "Set " << k+1 << " element: " << endl;
+	cin >> arr[k];
+}
+sort(arr);
+for (int i=0;i<12;i++)
+{    
+	cout << "a["<< i << "]=" << " " << arr[i]  << endl;
+}	
+	delete [] arr;
+
+return 0;
+}	
